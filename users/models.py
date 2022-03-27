@@ -54,7 +54,7 @@ class MyUser(AbstractBaseUser):
     def __str__(self):
         return self.email
 
-    def __str__(self):
+    def __unicode__(self):
         return self.email
 
     def has_perm(self, perm, obj=None):

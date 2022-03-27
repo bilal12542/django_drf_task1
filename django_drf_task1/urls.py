@@ -15,11 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from users.views import SignUpView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('users.urls')),
-    # path('user-detail/',)
+    path('users/', include('users.urls')),
+    path('posts/', include('posts.urls')),
+    path('signup/', SignUpView.as_view(), name='signup'),
+
 ]
 
 urlpatterns += [

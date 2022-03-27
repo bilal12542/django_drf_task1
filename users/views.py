@@ -40,7 +40,7 @@ class ProfileApiView(viewsets.ViewSet):
 class SignUpView(CreateView):
     model = MyUser
     form_class = CustomUserForm
-    success_url = 'login'
+    success_url = '/users/'
     template_name = 'signup.html'
 
 
